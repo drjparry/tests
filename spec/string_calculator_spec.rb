@@ -11,4 +11,8 @@ describe StringCalculator do
   it "returns the number when given only one number" do
     expect(calc.add("3")).to eq "3"
   end
+
+  it "returns to sum of two numbers when given two inputs" do
+    expect(calc.add("5", "6")). to eq "11"
+  end
 end
