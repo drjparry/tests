@@ -1,8 +1,14 @@
 require 'string_calculator'
 
-describe "String Calculator" do
+
+describe StringCalculator do
+  subject(:calc) {described_class.new}
+
   it "returns zero when given an empty string" do
-    calc = StringCalculator.new
-    expect(calc.add("")).to eq 0
+    expect(calc.add("")).to eq "0"
+  end
+
+  it "returns the number when given only one number" do
+    expect(calc.add("3")).to eq "3"
   end
 end
